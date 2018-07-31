@@ -41,6 +41,7 @@
         <tk.mybatis.version>2.0.3</tk.mybatis.version>
         <druid.version>1.0.18</druid.version>
         <jca.version>1.0.2</jca.version>
+        <log4j2.api.version>2.5</log4j2.api.version>
     </properties>
 
     <build>
@@ -150,6 +151,16 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

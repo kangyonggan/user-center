@@ -13,6 +13,7 @@ spring:
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
   type-aliases-package: com.kangyonggan.uc.model
+  config-location: classpath:mybatis.xml
 
 mapper:
   mappers: com.kangyonggan.uc.plugin.MyMapper
