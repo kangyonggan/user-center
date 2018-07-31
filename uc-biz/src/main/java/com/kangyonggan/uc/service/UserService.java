@@ -9,10 +9,18 @@ import com.kangyonggan.uc.model.User;
 public interface UserService {
 
     /**
+     * 保存用户
+     *
+     * @param user
+     */
+    void saveUser(User user);
+
+    /**
      * 根据用户名查找用户
      *
      * @param username
      * @return
      */
     User findUserByUsername(String username);
+
 }
