@@ -22,10 +22,11 @@ Configuration:
         fileName: ${log.home}/all.log
         filePattern: "${log.home}/%d{yyyy-MM-dd}-%i.log.gz"
         PatternLayout:
-          pattern: "%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t %logger{36}:%L] - %msg%n"
+          pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t %logger{36}:%L] - %msg%n"
         Policies:
+
           SizeBasedTriggeringPolicy:
-            size: "128 MB"
+            size: "500 MB"
         DefaultRolloverStrategy:
           max: 1000
 
