@@ -13,12 +13,18 @@ spring:
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
   type-aliases-package: com.kangyonggan.uc.model
+  config-location: classpath:mybatis.xml
+
+mapper:
+  mappers: com.kangyonggan.uc.plugin.MyMapper
+  not-empty: false
+  identity: MYSQL
 
 pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
 
 eureka:
   client:
