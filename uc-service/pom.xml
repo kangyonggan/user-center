@@ -61,18 +61,18 @@
 
     <profiles>
         <profile>
-            <id>2</id>
+            <id>uat</id>
             <properties>
-                <env>2</env>
+                <env>uat</env>
             </properties>
         </profile>
         <profile>
-            <id>1</id>
+            <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <env>1</env>
+                <env>dev</env>
             </properties>
         </profile>
     </profiles>
