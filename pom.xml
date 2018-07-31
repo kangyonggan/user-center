@@ -6,7 +6,15 @@
 
     <groupId>com.kangyonggan</groupId>
     <artifactId>user-center</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+
+    <modules>
+        <module>uc-model</module>
+        <module>uc-dao</module>
+        <module>uc-biz</module>
+        <module>uc-service</module>
+    </modules>
 
     <name>User Center</name>
     <description>用户中心</description>
@@ -25,28 +33,6 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -56,24 +42,23 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--project-->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>uc-biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>uc-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>uc-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <profiles>
-        <profile>
-            <id>2</id>
-            <properties>
-                <env>2</env>
-            </properties>
-        </profile>
-        <profile>
-            <id>1</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <env>1</env>
-            </properties>
-        </profile>
-    </profiles>
 </project>

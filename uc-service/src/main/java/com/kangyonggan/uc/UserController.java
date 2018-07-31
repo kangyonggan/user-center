@@ -1,8 +1,7 @@
-package com.kangyonggan.uc.controller;
+package com.kangyonggan.uc;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -10,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 7/31/18
  */
 @RestController
-@RequestMapping("user")
+@RequestMapping("uc")
 public class UserController {
 
-    @GetMapping("hello")
-    public String hello(@RequestParam(value = "name", required = false, defaultValue = "world") String name) {
-        return "hello " + name;
+    @GetMapping("test")
+    public String test() {
+        return "success";
     }
 
 }
