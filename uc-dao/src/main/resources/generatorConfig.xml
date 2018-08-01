@@ -10,14 +10,14 @@
 
         <!--base mapper-->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.kangyonggan.uc.plugin.MyMapper"/>
+            <property name="mappers" value="com.kangyonggan.common.mybatis.MyMapper"/>
         </plugin>
 
         <!--serialize plugin-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
 
         <!--lombok plugin-->
-        <plugin type="com.kangyonggan.uc.plugin.LombokPlugin"/>
+        <plugin type="com.kangyonggan.common.mybatis.LombokPlugin"/>
 
         <!--jdbc driver-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/uc"
@@ -42,7 +42,7 @@
         </javaClientGenerator>
 
         <!--table name-->
-        <table tableName="tb_table_name" domainObjectName="TableName">
+        <table tableName="tb_user" domainObjectName="User">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>

@@ -19,7 +19,7 @@ mybatis:
   config-location: classpath:mybatis.xml
 
 mapper:
-  mappers: com.kangyonggan.uc.plugin.MyMapper
+  mappers: com.kangyonggan.common.mybatis.MyMapper
   not-empty: false
   identity: MYSQL
 
