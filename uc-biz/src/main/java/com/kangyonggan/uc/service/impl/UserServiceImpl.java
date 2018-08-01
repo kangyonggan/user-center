@@ -1,6 +1,7 @@
 package com.kangyonggan.uc.service.impl;
 
 import com.github.ofofs.jca.annotation.Log;
+import com.kangyonggan.common.BaseService;
 import com.kangyonggan.uc.model.User;
 import com.kangyonggan.uc.service.UserService;
 import org.springframework.stereotype.Service;
